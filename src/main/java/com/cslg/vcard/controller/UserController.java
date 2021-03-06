@@ -65,12 +65,12 @@ public class UserController {
             user.setPassword(newPassword);
             boolean flag = userService.save(user);
             if (flag) {
-                return Result.ok("登录成功",user.getUsername());
+                return Result.ok("注册成功",user.getUsername());
             } else {
                 return Result.ok("该用户注册失败");
             }
         } else {
-                return Result.ok("该用户名已被注册，注册失败");
+                return Result.error(500,"该用户名已被注册，注册失败");
         }
     }
 

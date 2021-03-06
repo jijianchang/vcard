@@ -1,3 +1,4 @@
+/*
 package com.cslg.utils;
 
 import org.mybatis.logging.Logger;
@@ -8,9 +9,11 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+*/
 /**
  * @author jijianchang
- */
+ *//*
+
 @Component
 public class CommonIntercepter implements HandlerInterceptor {
 
@@ -28,3 +31,4 @@ public class CommonIntercepter implements HandlerInterceptor {
         return true;
     }
 }
+*/
