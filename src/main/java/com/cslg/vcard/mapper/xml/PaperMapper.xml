@@ -2,4 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cslg.vcard.mapper.PaperMapper">
 
+    <select id="queryPaper" resultType="com.cslg.vcard.entity.Paper">
+         select *
+        from paper
+        where eid=#{eid}
+    </select>
 </mapper>

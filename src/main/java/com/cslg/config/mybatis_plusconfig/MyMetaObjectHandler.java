@@ -10,8 +10,8 @@ import java.util.Date;
 public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject)  {
-       /* this.strictInsertFill(metaObject, "createTime", Date.class, new Date());
-        this.strictInsertFill(metaObject, "updateTime", Date.class, new Date());*/
+        this.strictInsertFill(metaObject, "createTime", Date.class, new Date());
+        this.strictInsertFill(metaObject, "updateTime", Date.class, new Date());
         this.strictInsertFill(metaObject, "delFlag", Integer.class, 0);
        /* this.strictInsertFill(metaObject, "version", Integer.class, 1);*/
     }

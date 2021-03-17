@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cslg.vcard.mapper.EcardMapper">
+<resultMap id="EcardList" type="com.cslg.vcard.model.EcardModel" autoMapping="true">
+    <collection property="awards" column="{eid=id}" select="com.cslg.vcard.mapper.AwardsMapper.queryAwards"></collection>
+    <collection property="eduBackgrounds" column="{eid=id}" select="com.cslg.vcard.mapper.EduBackgroundMapper.queryEduBackground"></collection>
+    <collection property="papers" column="{eid=id}" select="com.cslg.vcard.mapper.PaperMapper.queryPaper"></collection>
+    <collection property="studyDirections" column="{eid=id}" select="com.cslg.vcard.mapper.StudyDirectionMapper.queryStudyDirection"></collection>
+    <collection property="teachCources" column="{eid=id}" select="com.cslg.vcard.mapper.TeachCourceMapper.queryTeachCource"></collection>
+    <collection property="works" column="{eid=id}" select="com.cslg.vcard.mapper.WorkMapper.queryWork"></collection>
+</resultMap>
 
-
+    <select id="queryEcardList" resultMap="EcardList">
+        select *
+        from ecard
+        where id=#{id}
+    </select>
 </mapper>

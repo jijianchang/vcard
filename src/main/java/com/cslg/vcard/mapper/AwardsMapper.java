@@ -2,6 +2,9 @@ package com.cslg.vcard.mapper;
 
 import com.cslg.vcard.entity.Awards;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface AwardsMapper extends BaseMapper<Awards> {
 
+    List<Awards> queryAwards(@Param("eid") String eid);
 }

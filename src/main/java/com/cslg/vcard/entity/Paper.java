@@ -19,7 +19,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(value="Paper对象", description="")
+@ApiModel(value="论文", description="")
 public class Paper implements Serializable {
 
     private static final long serialVersionUID = 1L;

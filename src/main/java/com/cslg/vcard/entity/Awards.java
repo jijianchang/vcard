@@ -19,7 +19,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(value="Awards对象", description="")
+@ApiModel(value="奖项", description="")
 public class Awards implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -62,6 +62,8 @@ public class Ecard implements Serializable {
 
     @ApiModelProperty(value = "用户id")
     private String uid;
+    @ApiModelProperty(value = "学院类别id")
+    private String cid;
 
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
@@ -72,9 +74,11 @@ public class Ecard implements Serializable {
     private String audit;
 
     @ApiModelProperty(value = "创建时间")
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date createTime;
 
     @ApiModelProperty(value = "更新时间")
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
 
